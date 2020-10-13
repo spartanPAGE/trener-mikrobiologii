@@ -1,0 +1,167 @@
+[
+    {
+        "label": "pprint",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pprint",
+        "description": "pprint",
+        "detail": "pprint",
+        "documentation": {
+            "value": "\n```python\nimport pprint\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {
+            "value": "\n```python\nimport random\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {
+            "value": "\n```python\nimport copy\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ClinicalForm",
+        "importPath": "project.ClinicalForm",
+        "description": "project.ClinicalForm",
+        "isExtraImport": true,
+        "detail": "project.ClinicalForm",
+        "documentation": {
+            "value": "\n```python\nimport project.ClinicalForm\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Pathogen",
+        "importPath": "project.Pathogen",
+        "description": "project.Pathogen",
+        "isExtraImport": true,
+        "detail": "project.Pathogen",
+        "documentation": {
+            "value": "\n```python\nimport project.Pathogen\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Patient",
+        "importPath": "project.Patient",
+        "description": "project.Patient",
+        "isExtraImport": true,
+        "detail": "project.Patient",
+        "documentation": {
+            "value": "\n```python\nimport project.Patient\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "pathogens_db",
+        "kind": 5,
+        "importPath": "project.db.pathogens",
+        "description": "project.db.pathogens",
+        "peekOfCode": "pathogens_db = [\n    Pathogen(\"S. aureus\", [\n        ClinicalForm(\"czyraczność\"),\n        ClinicalForm(\"czyrak\", susceptibilities=[\"czyraczność\"]),\n        ClinicalForm(\"zapalenie mieszków włosowych\", susceptibilities=[\"zła higiena\", \"czyraczność\"]),\n        ClinicalForm(\"jęczmień\"),\n        ClinicalForm(\"liszajec\", susceptibilities=[\"zła higiena\"]),\n        ClinicalForm(\"zanokcica\"),\n        ClinicalForm(\"zastrzał\"),\n        ClinicalForm(\"ropne zapalenie gruczołów potowych\"),",
+        "detail": "project.db.pathogens",
+        "documentation": {
+            "value": "\n```python\nfrom project.db.pathogens import pathogens_db\n```\n\n```python\n\n\n```\n\n```python\npathogens_db = [\n    Pathogen(\"S. aureus\", [\n        ClinicalForm(\"czyraczność\"),\n        ClinicalForm(\"czyrak\", susceptibilities=[\"czyraczność\"]),\n        ClinicalForm(\"zapalenie mieszków włosowych\", susceptibilities=[\"zła higiena\", \"czyraczność\"]),\n        ClinicalForm(\"jęczmień\"),\n        ClinicalForm(\"liszajec\", susceptibilities=[\"zła higiena\"]),\n        ClinicalForm(\"zanokcica\"),\n        ClinicalForm(\"zastrzał\"),\n        ClinicalForm(\"ropne zapalenie gruczołów potowych\"),\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Bed",
+        "kind": 6,
+        "importPath": "project.Bed",
+        "description": "project.Bed",
+        "peekOfCode": "class Bed:\n    def __init__(self, patient = None, pathogens=[]):\n        self.patient = patient\n        self.pathogens = []\n    def has_patient(self):\n        return self.patient != None\n    def is_free(self):\n        return not self.has_patient()",
+        "detail": "project.Bed",
+        "documentation": {
+            "value": "\n```python\nfrom project.Bed import Bed\n```\n\n```python\n\n\n```\n\n```python\nclass Bed:\n    def __init__(self, patient = None, pathogens=[]):\n        self.patient = patient\n        self.pathogens = []\n    def has_patient(self):\n        return self.patient != None\n    def is_free(self):\n        return not self.has_patient()\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "ClinicalForm",
+        "kind": 6,
+        "importPath": "project.ClinicalForm",
+        "description": "project.ClinicalForm",
+        "peekOfCode": "class ClinicalForm:\n    def __init__(self, name, susceptibilities=[], requirements=[]):\n        self.name = name\n        self.susceptibilities = susceptibilities\n        self.requirements = requirements\n    def __repr__(self):\n        return pprint.pformat(vars(self))",
+        "detail": "project.ClinicalForm",
+        "documentation": {
+            "value": "\n```python\nfrom project.ClinicalForm import ClinicalForm\n```\n\n```python\n\n\n```\n\n```python\nclass ClinicalForm:\n    def __init__(self, name, susceptibilities=[], requirements=[]):\n        self.name = name\n        self.susceptibilities = susceptibilities\n        self.requirements = requirements\n    def __repr__(self):\n        return pprint.pformat(vars(self))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "LabTest",
+        "kind": 6,
+        "importPath": "project.LabTest",
+        "description": "project.LabTest",
+        "peekOfCode": "class LabTest:\n    def __init__(self):\n        pass",
+        "detail": "project.LabTest",
+        "documentation": {
+            "value": "\n```python\nfrom project.LabTest import LabTest\n```\n\n```python\n\n\n```\n\n```python\nclass LabTest:\n    def __init__(self):\n        pass\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Pathogen",
+        "kind": 6,
+        "importPath": "project.Pathogen",
+        "description": "project.Pathogen",
+        "peekOfCode": "class Pathogen:\n    def __init__(self, name, clinical_forms=[]):\n        self.name = name\n        self.clinical_forms = clinical_forms\n    def __repr__(self):\n        return pprint.pformat(vars(self))",
+        "detail": "project.Pathogen",
+        "documentation": {
+            "value": "\n```python\nfrom project.Pathogen import Pathogen\n```\n\n```python\n\n\n```\n\n```python\nclass Pathogen:\n    def __init__(self, name, clinical_forms=[]):\n        self.name = name\n        self.clinical_forms = clinical_forms\n    def __repr__(self):\n        return pprint.pformat(vars(self))\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "Patient",
+        "kind": 6,
+        "importPath": "project.Patient",
+        "description": "project.Patient",
+        "peekOfCode": "class Patient:\n    def __init__(self, age, sex, predispositions=[], pathogens=[], clinical_forms=[]):\n        self.age = age\n        self.sex = sex\n        self.predispositions = predispositions\n        self.pathogens = pathogens\n        self.clinical_forms = clinical_forms",
+        "detail": "project.Patient",
+        "documentation": {
+            "value": "\n```python\nfrom project.Patient import Patient\n```\n\n```python\n\n\n```\n\n```python\nclass Patient:\n    def __init__(self, age, sex, predispositions=[], pathogens=[], clinical_forms=[]):\n        self.age = age\n        self.sex = sex\n        self.predispositions = predispositions\n        self.pathogens = pathogens\n        self.clinical_forms = clinical_forms\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "extract_clinical_forms_by_susceptibilities",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def extract_clinical_forms_by_susceptibilities(pathogens):\n    extracted_clinical_forms = {\n        \"by_susceptibility\": {},\n        \"others\": []\n    }\n    for pathogen in pathogens:\n        for clinical_form in pathogen.clinical_forms:\n            mapped_clinical_form = {\n                \"clinical_form\": clinical_form,\n                \"pathogen\": pathogen.name",
+        "detail": "main",
+        "documentation": {
+            "value": "\n```python\nfrom main import extract_clinical_forms_by_susceptibilities\n```\n\n```python\n\n\n```\n\n```python\ndef extract_clinical_forms_by_susceptibilities(pathogens):\n    extracted_clinical_forms = {\n        \"by_susceptibility\": {},\n        \"others\": []\n    }\n    for pathogen in pathogens:\n        for clinical_form in pathogen.clinical_forms:\n            mapped_clinical_form = {\n                \"clinical_form\": clinical_form,\n                \"pathogen\": pathogen.name\n```\n",
+            "supportThemeIcons": false
+        }
+    },
+    {
+        "label": "generate_sick_patient",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def generate_sick_patient(patient_model, pathogens, clinical_forms):\n    container = clinical_forms[\"others\"]\n    if len(patient_model.predispositions) > 0 and random.random() > 0.3:\n        random_predispositions = copy.copy(patient_model.predispositions)\n        for predisposition in random_predispositions:\n            if predisposition in clinical_forms[\"by_susceptibility\"]:\n                container = clinical_forms[\"by_susceptibility\"][predisposition]\n                break\n    cf_pathogen_dict = random.choice(container)\n    pathogen_name = cf_pathogen_dict[\"pathogen\"]",
+        "detail": "main",
+        "documentation": {
+            "value": "\n```python\nfrom main import generate_sick_patient\n```\n\n```python\n\n\n```\n\n```python\ndef generate_sick_patient(patient_model, pathogens, clinical_forms):\n    container = clinical_forms[\"others\"]\n    if len(patient_model.predispositions) > 0 and random.random() > 0.3:\n        random_predispositions = copy.copy(patient_model.predispositions)\n        for predisposition in random_predispositions:\n            if predisposition in clinical_forms[\"by_susceptibility\"]:\n                container = clinical_forms[\"by_susceptibility\"][predisposition]\n                break\n    cf_pathogen_dict = random.choice(container)\n    pathogen_name = cf_pathogen_dict[\"pathogen\"]\n```\n",
+            "supportThemeIcons": false
+        }
+    }
+]
