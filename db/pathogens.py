@@ -38,6 +38,20 @@ pathogens_db = [
             Treatment("cefazolina"),
             Treatment("wankomycyna"),
             Treatment("penicylina z inhibitorem beta-laktamazy")
+        ],
+        positive_tests=[
+            "test na czynnik zlepny CF",
+            "test na białko A",
+            "test na polisacharyd otoczkowy S. aureus",
+            "test na hialuronidazę",
+            "test na stafylokinazę",
+            "test na DN-azę",
+            "test na proteinazę",
+            "test na hemolizyny",
+            "test na leukocydynę",
+            "test na toksyny epidermolityczne: eksfoliatyny ETA, ETB",
+            "test na enterotoksyny A-E",
+            "test na TSST1",
         ]
     )
 ]
