@@ -56,7 +56,7 @@ if __name__ == "__main__":
         ),
         PetriDish(
             name="agar z penicyliną z ihibitorem beta-laktamazy",
-            substances=["penicylina z inhibitorem beta-laktamazy"],
+            substances=["penicylina z inhibitorem"],
             pathogens=[s_aureus]
         ),
     ]
@@ -71,7 +71,7 @@ if __name__ == "__main__":
             print("Brak zmian w szalce '", dish.name, "'")
 
 
-    """patient_model = random.choice(patients_db)
+    patient_model = random.choice(patients_db)
     sick_patient = generate_sick_patient(patient_model, pathogens_db, clinical_forms_db)
 
     print("Dostępne terapeutyki: ")
@@ -84,5 +84,5 @@ if __name__ == "__main__":
     pprint.pprint(sick_patient.predispositions)
     print("Dolegliwości pacjenta: ")
     pprint.pprint(list([cf.name for cf in sick_patient.clinical_forms]))
-    """
+
 

@@ -3,15 +3,15 @@ from models.LabTest import LabTest
 lab_tests_db = {
     LabTest(
         name="test na czynnik zlepny CF",
-        category="S. aureus",
+        category="aglutynacyjne",
     ),
     LabTest(
         name="test na białko A",
-        category="S. aureus",
+        category="immunotesty",
     ),
     LabTest(
         name="test na polisacharyd otoczkowy S. aureus",
-        category="S. aureus",
+        category="immunotesty",
     ),
     LabTest(
         name="test na hialuronidazę",
@@ -48,5 +48,46 @@ lab_tests_db = {
     LabTest(
         name="test na TSST1",
         category="toksyny",
+    ),
+
+    LabTest(
+        name="test na białko M",
+        category="immunotesty",
+    ),
+    LabTest(
+        name="test na białko F",
+        category="immunotesty",
+    ),
+    LabTest(
+        name="test na białko G",
+        category="immunotesty",
+    ),
+    LabTest(
+        name="test na streptokinazę",
+        category="enzymy",
+    ),
+    LabTest(
+        name="test na streptolizynę O",
+        category="toksyny",
+    ),
+    LabTest(
+        name="test na streptolizynę S",
+        category="toksyny",
+    ),
+    LabTest(
+        name="test na toksynę erytrogenną A (SpeA)",
+        category="toksyny",
+    ),
+    LabTest(
+        name="test na toksynę erytrogenną B (SpeB)",
+        category="toksyny",
+    ),
+    LabTest(
+        name="test na toksynę erytrogenną C (SpeC)",
+        category="toksyny",
+    ),
+    LabTest(
+        name="test na antygen grupy A (dimer N-acetyloglukozaminy i ramnozy",
+        category="immunotesty"
     )
 }
