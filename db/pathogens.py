@@ -1,5 +1,6 @@
 from models.Pathogen import Pathogen, Treatment
 from models.ClinicalForm import ClinicalForm
+from models.InvitroReaction import InvitroReaction
 
 pathogens_db = [
     Pathogen(
@@ -52,6 +53,10 @@ pathogens_db = [
             "test na toksyny epidermolityczne: eksfoliatyny ETA, ETB",
             "test na enterotoksyny A-E",
             "test na TSST1",
+        ],
+        invitro_reactions=[
+            InvitroReaction("mannitol", "fermentacja"),
+            InvitroReaction("krew", "hemoliza"),
         ]
     )
 ]
