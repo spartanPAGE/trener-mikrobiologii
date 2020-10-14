@@ -1,7 +1,6 @@
 from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
-    Chemotherapeutic("kloksacylina"),
     Chemotherapeutic("cefazolina"),
     Chemotherapeutic("wankomycyna"),
     Chemotherapeutic(
