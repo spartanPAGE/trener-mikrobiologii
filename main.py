@@ -12,7 +12,7 @@ from db.patients import patients_db
 if __name__ == "__main__":
     clinical_forms_db = extract_clinical_forms_by_susceptibilities(pathogens_db)
     
-    for i in range(5):
+    for i in range(50):
         patient_model = random.choice(patients_db)
         sick_patient = generate_sick_patient(patient_model, pathogens_db, clinical_forms_db)
         print(sick_patient.age, sick_patient.sex, sick_patient.predispositions, sick_patient.pathogens[0].name, sick_patient.clinical_forms[0].name)
