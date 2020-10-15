@@ -5,10 +5,11 @@ chemotherapeutics_db = [
     Chemotherapeutic("wankomycyna"),
     Chemotherapeutic(
         name="penicylina benzylowa",
-        traits=[""]
+        traits=["penicyliny"]
     ),
     Chemotherapeutic(
         name="penicylina z inhibitorem beta-laktamazy",
+        traits=["penicyliny"]
     ),
     Chemotherapeutic(
         name="kloksacylina",

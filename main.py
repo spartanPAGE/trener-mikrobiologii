@@ -11,7 +11,7 @@ from db.pathogens import pathogens_db
 from db.patients import patients_db
 from db.lab_tests import lab_tests_db
 from db.chemotherapeutics import chemotherapeutics_db
-from db.reactants import reactants_db
+from db.reagents import reagents_db
 
 from gamemodes.hesoyam import hesoyam_gamemode
 

@@ -83,6 +83,11 @@ pathogens_db = [
             Treatment("linkozamidy"),
             Treatment("cefalosporyny"),
             Treatment("bacytracyna"),
+            Treatment("cefalosporyny 1 generacji"),
+            Treatment("cefalosporyny 2 generacji"),
+            Treatment("cefalosporyny 3 generacji"),
+            Treatment("cefalosporyny 4 generacji"),
+            Treatment("cefalosporyny 5 generacji"),
         ],
     ),
     Pathogen(

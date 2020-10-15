@@ -1,7 +1,7 @@
 class Bed:
-    def __init__(self, patient = None, pathogens=[]):
+    def __init__(self, patient = None, pathogens=None):
         self.patient = patient
-        self.pathogens = []
+        self.pathogens = pathogens or []
 
     def has_patient(self):
         return self.patient != None

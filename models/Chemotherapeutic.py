@@ -1,5 +1,5 @@
 class Chemotherapeutic:
-    def __init__(self, name, description="", traits=[]):
+    def __init__(self, name, description="", traits=None):
         self.name = name
         self.description = description
-        self.traits = traits
+        self.traits = traits or None
