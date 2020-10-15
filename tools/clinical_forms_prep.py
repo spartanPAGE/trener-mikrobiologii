@@ -18,5 +18,4 @@ def extract_clinical_forms_by_susceptibilities(pathogens):
             else:
                 others = extracted_clinical_forms["others"]
                 others.append(mapped_clinical_form)
-
-        return extracted_clinical_forms
+    return extracted_clinical_forms

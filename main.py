@@ -90,5 +90,5 @@ if __name__ == "__main__":
     pprint.pprint(sick_patient.predispositions)
     print("Dolegliwości pacjenta: ")
     pprint.pprint(list([cf.name for cf in sick_patient.clinical_forms]))
-
-
+    print("Patogen, którego miałeś się domyślić:", sick_patient.pathogens[0].name)
+    print("patogeny w bazie:", [p.name for p in pathogens_db])
