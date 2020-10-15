@@ -4,6 +4,37 @@ from models.InvitroReaction import InvitroReaction
 
 pathogens_db = [
     Pathogen(
+        name="S. agalactiae",
+        clinical_forms=[
+            ClinicalForm("zapalenie płuc", susceptibilities=["noworodek", "alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("ZOMR", requirements=["noworodek"]),
+            ClinicalForm("sepsa", susceptibilities=["noworodek", "alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("zakażenie pępka lub kikuta pępowiny", requirements=["noworodek"]),
+            ClinicalForm("zapalenie ucha środkowego"),
+            ClinicalForm("zapalenie kości, szpiku i stawów", susceptibilities=["ciężarna", "alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("zapalenie kosmówki", requirements="ciężarna"),
+            ClinicalForm("ZUM", susceptibilities=["ciężarna", "alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("zapalenie błony śluzowej macicy", requirements=["niedawny poród"]),
+            ClinicalForm("gorączka połodowa", requirements=["niedawny poród"]),
+            ClinicalForm("zapalenie skóry i tkanek miękkich", susceptibilities=["alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("zapalenie gardła", susceptibilities=["alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("zapalenie wsierdzia", susceptibilities=["ciężarna", "alkoholizm", "starzec", "obniżona odporność"]),
+            ClinicalForm("zapalenie otrzewnej", susceptibilities=["ciężarna", "alkoholizm", "starzec", "obniżona odporność"]),
+        ],
+        positive_tests=[
+            "test antygenowy w kierunku S. agalactiae",
+            "test PCR w kierunku GBS",
+        ],
+        treatments=[
+            Treatment("wankomycyna"),
+            Treatment("makrolidy"),
+            Treatment("cefalosporyny 1 generacji"),
+            Treatment("cefalosporyny 3 generacji"),
+            Treatment("cefalosporyny 4 generacji"),
+            Treatment("cefalosporyny 5 generacji"),
+        ],
+    ),
+    Pathogen(
         name="S. pyogenes",
         clinical_forms=[
             ClinicalForm("zapalenie gardła"),
@@ -18,7 +49,7 @@ pathogens_db = [
             ClinicalForm("celulitis"),
             ClinicalForm("zakażenie rany", susceptibilities=["rana"]),
             ClinicalForm("infekcja oparzenia", requirements=["oparzenie"]),
-            ClinicalForm("zakażenie pępka", susceptibilities=["noworodek"]),
+            ClinicalForm("zakażenie pępka lub kikuta pępowiny", susceptibilities=["noworodek"]),
             ClinicalForm("martwicze zapalenie powięzi"),
             ClinicalForm("sepsa"),
             ClinicalForm("zespół wstrząsu toksycznego"),
@@ -95,7 +126,6 @@ pathogens_db = [
             Treatment("cefalosporyny 3 generacji"),
             Treatment("cefalosporyny 4 generacji"),
             Treatment("cefalosporyny 5 generacji"),
-
         ],
         positive_tests=[
             "test na czynnik zlepny CF",

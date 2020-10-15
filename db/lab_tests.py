@@ -88,6 +88,14 @@ lab_tests_db = {
     ),
     LabTest(
         name="test na antygen grupy A (dimer N-acetyloglukozaminy i ramnozy",
-        category="immunotesty"
+        category="immunotesty",
+    ),
+    LabTest(
+        name="test antygenowy w kierunku S. agalactiae",
+        category="immunotesty",
+    ),
+    LabTest(
+        name="test PCR w kierunku GBS",
+        category="PCR",
     )
 }
