@@ -55,7 +55,7 @@ chemotherapeutics_db = [
             Są nieaktywne w stosunku do Pseudomonas aeruginosa ani Gram-ujemnych beztlenowców.
         """,
         traits=["cefalosporyny"],
-,    ),
+    ),
     Chemotherapeutic(
         name="cefalosporyny 3 generacji",
         description="""
