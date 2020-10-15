@@ -16,4 +16,10 @@ from db.reagents import reagents_db
 from gamemodes.hesoyam import hesoyam_gamemode
 
 if __name__ == "__main__":
+    print("""
+    ******************************************************************
+        TRENER MIKROBIOLOGII, AUTOR: PATRYK WERTKA.
+        WERSJA PUBLICZNA 0.01, NAZWA KODOWA: PIERWSZE KOTY ZA PŁOTY
+    ******************************************************************
+    """)
     hesoyam_gamemode()

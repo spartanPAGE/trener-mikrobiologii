@@ -45,11 +45,9 @@ def input_in_range(text, range_):
 class Game:
     def __init__(self):
         self.clinical_forms_db = prepare_clinical_forms_db()
-        self.patient = prepare_patient(self.clinical_forms_db)
-        self.petri_dishes = []
+        self.next_patient()
     
     def start(self):
-        show_patient_info(self.patient)
         self.gameloop()
 
     def add_reagent_to_petri_dish(self, petri_dish):
@@ -148,6 +146,11 @@ class Game:
         self.print_actions(actions)
         self.execute_action(self.get_decision_idx(actions), actions)
 
+    def next_patient(self):
+        self.patient = prepare_patient(self.clinical_forms_db)
+        self.petri_dishes = []
+        show_patient_info(self.patient)
+
     def print_actions(self, actions):
         print()
         print("### podejmij akcję: ", end="")
@@ -172,6 +175,7 @@ class Game:
             ("testy", lambda: self.lab_tests_action()),
             ("odczynniki do hodowli", show_available_reagents),
             ("hodowle", lambda: self.petri_dishes_action()),
+            ("wypisz pacjenta", lambda: self.next_patient())
         ]
 
         while True:
