@@ -113,7 +113,7 @@ pathogens_db = [
         ],
         invitro_reactions=[
             InvitroReaction("mannitol", "fermentacja"),
-            InvitroReaction("krew", "hemoliza"),
+            InvitroReaction("krew", "hemoliza beta"),
         ]
     )
 ]
