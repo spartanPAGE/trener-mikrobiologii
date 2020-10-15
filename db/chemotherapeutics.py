@@ -3,27 +3,27 @@ from models.Chemotherapeutic import Chemotherapeutic
 chemotherapeutics_db = [
     Chemotherapeutic(
         name="erytromycyna",
-        traits=["makrolidy"],
+        traits=["makrolidy", "makrolidy starszej generacji"],
     ),
     Chemotherapeutic(
         name="azytromycyna",
-        traits=["makrolidy"],
+        traits=["makrolidy", "makrolidy nowszej generacji"],
     ),
     Chemotherapeutic(
         name="roksytomycyna",
-        traits=["makrolidy"],
+        traits=["makrolidy", "makrolidy nowszej generacji"],
     ),
     Chemotherapeutic(
         name="klarytromycyna",
-        traits=["makrolidy"],
+        traits=["makrolidy", "makrolidy nowszej generacji"],
     ),
     Chemotherapeutic(
         name="josamycyna",
-        traits=["makrolidy"],
+        traits=["makrolidy", "makrolidy nowszej generacji"],
     ),
     Chemotherapeutic(
         name="spiramycyna",
-        traits=["makrolidy"],
+        traits=["makrolidy", "makrolidy nowszej generacji"],
     ),
     Chemotherapeutic("bacytracyna"),
     Chemotherapeutic("cefazolina"),
