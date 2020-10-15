@@ -65,7 +65,7 @@ class Game:
 
     def prepare_petri_dish(self):
         petri_dish = PetriDish(
-            name=input("Opisz hodowlę: "),
+            name=input("opisz hodowlę: "),
             pathogens=self.patient.pathogens
         )
         
@@ -112,6 +112,42 @@ class Game:
         self.print_actions(actions)
         self.execute_action(self.get_decision_idx(actions), actions)
 
+    def perform_lab_test(self):
+        if len(self.petri_dishes) > 0:
+            print("Możliwe do użycia hodowle:", end=" ")
+            print(", ".join([pd.name for pd in self.petri_dishes]))
+        else:
+            print("Brak przygotowanych hodowli.")
+            return
+
+        tests = [test.name for test in lab_tests_db]
+        test = None
+        while True:
+            test_name = input("Podaj nazwę testu: ")
+            if test_name in tests:
+                test = next(t for t in lab_tests_db if t.name == test_name)
+                break
+
+        dishes = [dish.name for dish in self.petri_dishes]
+        dish = None
+        while True:
+            dish_name = input("Podaj nazwę hodowli: ")
+            if dish_name in dishes:
+                dish = next(d for d in self.petri_dishes if d.name == dish_name)
+                break
+
+        print(test.name, "wynik", ("POZYTYWNY" if test.perform_test(dish) else "NEGATYWNY"))
+
+    def lab_tests_action(self):
+        show_available_tests()
+        actions = [
+            ("wyjdź", exit),
+            ("wykonaj test", lambda: self.perform_lab_test()),
+            ("powrót", lambda: None)
+        ]
+        self.print_actions(actions)
+        self.execute_action(self.get_decision_idx(actions), actions)
+
     def print_actions(self, actions):
         print()
         print("### podejmij akcję: ", end="")
@@ -133,7 +169,7 @@ class Game:
             ("wyjdź", exit),
             ("o pacjencie", lambda: show_patient_info(self.patient)),
             ("leki", show_available_chemo),
-            ("testy", show_available_tests),
+            ("testy", lambda: self.lab_tests_action()),
             ("odczynniki do hodowli", show_available_reagents),
             ("hodowle", lambda: self.petri_dishes_action()),
         ]
