@@ -1,6 +1,31 @@
 from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
+    Chemotherapeutic(
+        name="erytromycyna",
+        traits=["makrolidy"],
+    ),
+    Chemotherapeutic(
+        name="azytromycyna",
+        traits=["makrolidy"],
+    ),
+    Chemotherapeutic(
+        name="roksytomycyna",
+        traits=["makrolidy"],
+    ),
+    Chemotherapeutic(
+        name="klarytromycyna",
+        traits=["makrolidy"],
+    ),
+    Chemotherapeutic(
+        name="josamycyna",
+        traits=["makrolidy"],
+    ),
+    Chemotherapeutic(
+        name="spiramycyna",
+        traits=["makrolidy"],
+    ),
+    Chemotherapeutic("bacytracyna"),
     Chemotherapeutic("cefazolina"),
     Chemotherapeutic("wankomycyna"),
     Chemotherapeutic(
@@ -21,6 +46,7 @@ chemotherapeutics_db = [
             Są nieaktywne w stosunku do pałeczek G-: Pseudomonas aeruginosa, pałeczek salmonelli i bakterii z rodziny Proteus.
             Słabo przenikają do płynu mózgowo-rdzeniowego.
         """,
+        traits=["cefalosporyny"],
     ),
     Chemotherapeutic(
         name="cefalosporyny 2 generacji",
@@ -28,7 +54,8 @@ chemotherapeutics_db = [
             działają silniej na bakterie Gram-dodatnie niż na Gram-ujemne.
             Są nieaktywne w stosunku do Pseudomonas aeruginosa ani Gram-ujemnych beztlenowców.
         """,
-    ),
+        traits=["cefalosporyny"],
+,    ),
     Chemotherapeutic(
         name="cefalosporyny 3 generacji",
         description="""
@@ -36,7 +63,7 @@ chemotherapeutics_db = [
         są skuteczne w leczeniu zakażeń opornych na inne antybiotyki.
         Większość przechodzi przez barierę krew-mózg i jest skuteczna w leczeniu zapalenia opon mózgowych
         """,
-        traits=["szerokie spektrum", "dobre przenikanie bariery krew-mózg"]
+        traits=["cefalosporyny", "szerokie spektrum", "dobre przenikanie bariery krew-mózg"],
     ),
     Chemotherapeutic(
         name="cefalosporyny 4 generacji",
@@ -45,7 +72,7 @@ chemotherapeutics_db = [
         są skuteczne w leczeniu zakażeń opornych na inne antybiotyki.
         Większość przechodzi przez barierę krew-mózg i jest skuteczna w leczeniu zapalenia opon mózgowych
         """,
-        traits=["szerokie spektrum", "świetne przenikanie bariery krew-mózg"]
+        traits=["cefalosporyny", "szerokie spektrum", "świetne przenikanie bariery krew-mózg"],
     ),
     Chemotherapeutic(
         name="cefalosporyny 5 generacji",
@@ -54,6 +81,6 @@ chemotherapeutics_db = [
         Trzeba je podawać pozajelitowo (np. dożylnie).
         Działają na gronkowce metycylinooporne (MRSA/MRCNS) oporne na inne β-laktamy oraz część enterokoków (naturalnie opornych na inne cefalosporyny).
         """,
-        traits=["szerokie spektrum"],
+        traits=["cefalosporyny", "szerokie spektrum"],
     )
 ]

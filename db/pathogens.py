@@ -22,6 +22,7 @@ pathogens_db = [
             ClinicalForm("zapalenie otrzewnej", susceptibilities=["ciężarna", "alkoholizm", "starzec", "obniżona odporność"]),
         ],
         positive_tests=[
+            "test na hemolizyny",
             "test antygenowy w kierunku S. agalactiae",
             "test PCR w kierunku GBS",
         ],
@@ -33,6 +34,9 @@ pathogens_db = [
             Treatment("cefalosporyny 4 generacji"),
             Treatment("cefalosporyny 5 generacji"),
         ],
+        invitro_reactions=[
+            InvitroReaction("krew", "hemoliza beta"),
+        ]
     ),
     Pathogen(
         name="S. pyogenes",
@@ -72,10 +76,11 @@ pathogens_db = [
             "test na proteinazę",
             "test na streptolizynę O",
             "test na streptolizynę S",
+            "test na hemolizyny",
             "test na toksynę erytrogenną A (SpeA)",
             "test na toksynę erytrogenną B (SpeB)",
             "test na toksynę erytrogenną C (SpeC)",
-            "test na antygen grupy A (dimer N-acetyloglukozaminy i ramnozy",
+            "test na antygen grupy A",
         ],
         treatments=[
             Treatment("penicyliny"),
@@ -83,11 +88,9 @@ pathogens_db = [
             Treatment("linkozamidy"),
             Treatment("cefalosporyny"),
             Treatment("bacytracyna"),
-            Treatment("cefalosporyny 1 generacji"),
-            Treatment("cefalosporyny 2 generacji"),
-            Treatment("cefalosporyny 3 generacji"),
-            Treatment("cefalosporyny 4 generacji"),
-            Treatment("cefalosporyny 5 generacji"),
+        ],
+        invitro_reactions=[
+            InvitroReaction("krew", "hemoliza beta"),
         ],
     ),
     Pathogen(
