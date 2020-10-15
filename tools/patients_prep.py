@@ -30,7 +30,7 @@ def generate_sick_patient(patient_model, pathogens, clinical_forms):
     )
     container = other_clinical_forms
 
-    if len(patient_model.predispositions) > 0 and random.random() > 0.3:
+    if len(patient_model.predispositions) > 0 and random.random() > 0.5:
         container = _get_random_predisposed_form(
             patient_model, clinical_forms_by_susceptibility
         ) or other_clinical_forms
