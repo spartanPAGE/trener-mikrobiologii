@@ -11,8 +11,9 @@ from db.pathogens import pathogens_db
 from db.patients import patients_db
 from db.lab_tests import lab_tests_db
 from db.chemotherapeutics import chemotherapeutics_db
+from db.reactants import reactants_db
 
-# todo: handle requirements of clinical forms
+
 if __name__ == "__main__":
     clinical_forms_db = extract_clinical_forms_by_susceptibilities(pathogens_db)
     
@@ -78,8 +79,13 @@ if __name__ == "__main__":
     pprint.pprint(list([chemo.name for chemo in chemotherapeutics_db]))
     print("Dostępne testy:")
     pprint.pprint(list([test.name for test in lab_tests_db]))
+    print("Dostępne reagenty:")
+    pprint.pprint(list([r.name for r in reactants_db]))
 
     print("#" * 12)
+    print("Wygenerowano pacjenta!")
+    print("Wiek:", sick_patient.age)
+    print("Płeć:", sick_patient.sex)
     print("Czynniki predyspozycyjne pacjenta: ")
     pprint.pprint(sick_patient.predispositions)
     print("Dolegliwości pacjenta: ")
