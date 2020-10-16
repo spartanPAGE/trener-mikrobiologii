@@ -11,6 +11,7 @@ from models.PetriDish import PetriDish
 
 from tools.clinical_forms_prep import extract_clinical_forms_by_susceptibilities
 from tools.patients_prep import generate_sick_patient
+from tools.pathogen import does_substance_kills_pathogen
 
 def prepare_clinical_forms_db():
     return extract_clinical_forms_by_susceptibilities(pathogens_db)
@@ -146,6 +147,37 @@ class Game:
         self.print_actions(actions)
         self.execute_action(self.get_decision_idx(actions), actions)
 
+    def apply_treatment(self):
+        drugs = [ch.name for ch in chemotherapeutics_db]
+        while True:
+            drug_name = input("Podaj nazwę leku: ")
+            if drug_name in drugs:
+                killed_pathogens = []
+                for pathogen in self.patient.pathogens:
+                    if does_substance_kills_pathogen(drug_name, pathogen):
+                        killed_pathogens.append(pathogen)
+
+                for killed_pathogen in killed_pathogens:
+                    self.patient.pathogens.remove(killed_pathogen)
+
+                if len(self.patient.pathogens) > 0:
+                    print("Pacjent wciąż choruje.")
+                else:
+                    print("Pacjent wyzdrowiał. Wołam nowego pacjenta.")
+                    self.next_patient()
+                break
+
+    def chemotherapeutics_action(self):
+        show_available_chemo()
+
+        actions = [
+            ("wyjdź", exit),
+            ("podaj lek", lambda: self.apply_treatment()),
+            ("powrót", lambda: None)
+        ]
+        self.print_actions(actions)
+        self.execute_action(self.get_decision_idx(actions), actions)
+
     def next_patient(self):
         self.patient = prepare_patient(self.clinical_forms_db)
         self.petri_dishes = []
@@ -171,7 +203,7 @@ class Game:
         actions = [
             ("wyjdź", exit),
             ("o pacjencie", lambda: show_patient_info(self.patient)),
-            ("leki", show_available_chemo),
+            ("leki", lambda: self.chemotherapeutics_action()),
             ("testy", lambda: self.lab_tests_action()),
             ("odczynniki do hodowli", show_available_reagents),
             ("hodowle", lambda: self.petri_dishes_action()),

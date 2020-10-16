@@ -1,10 +1,4 @@
-from db.chemotherapeutics import chemotherapeutics_db
-
-def any_trait(substance, trait):
-    for chemo in chemotherapeutics_db:
-        if chemo.name == substance:
-            return trait in chemo.traits
-    return False
+from tools.pathogen import does_substance_kills_pathogen
 
 class PetriDish:
     def __init__(self, name, substances=None, pathogens=None):
@@ -28,6 +22,5 @@ class PetriDish:
     def react_based_on_treatments(self):
         for substance in self.substances:
             for pathogen in self.pathogens:
-                for treatment in pathogen.treatments:
-                    if substance == treatment.drug_name or any_trait(substance, treatment.drug_name):
+                if does_substance_kills_pathogen(substance, pathogen):
                         self.effects.add("śmierć patogenu")

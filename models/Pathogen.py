@@ -1,5 +1,3 @@
-import pprint
-
 class Treatment:
     def __init__(self, drug_name, success_chance=1.0):
         self.drug_name = drug_name
@@ -13,6 +11,3 @@ class Pathogen:
         self.treatments = treatments
         self.positive_tests = positive_tests
         self.invitro_reactions = invitro_reactions
-
-    def __repr__(self):
-        return pprint.pformat(vars(self))
