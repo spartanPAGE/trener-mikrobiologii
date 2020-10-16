@@ -50,7 +50,7 @@ pathogens_db = [
                 susceptibilities=S_PNEUMONIAE_SUS,
             ),
             ClinicalForm(
-                name="infekcja dolnych drógo oddechowych",
+                name="infekcja dolnych dróg oddechowych",
                 susceptibilities=S_PNEUMONIAE_SUS,
             ),
             ClinicalForm(
