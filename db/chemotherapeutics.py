@@ -2,6 +2,10 @@ from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
     Chemotherapeutic(
+        name="ceftriakson",
+        traits=["cefalosporyny 3 generacji"]
+    ),
+    Chemotherapeutic(
         name="linkomycyna",
         traits=["linkozamidy"],
     ),

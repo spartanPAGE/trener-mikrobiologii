@@ -104,6 +104,7 @@ pathogens_db = [
             Treatment("lewofloksacyna"),
             Treatment("moksifloksacyna"),
             Treatment("teikoplanina"),
+            Treatment("kloksacylina"),
             Treatment("cefalosporyny 2 generacji"),
             Treatment("cefalosporyny 3 generacji"),
             Treatment("cefalosporyny 4 generacji"),
