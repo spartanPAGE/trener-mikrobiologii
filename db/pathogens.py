@@ -34,7 +34,7 @@ pathogens_db = [
             Treatment("penicyliny"),
         ],
         positive_tests=[
-            "test PCR w kierunku GDB",
+            "test PCR w kierunku GDS",
 
         ],
         invitro_reactions=[
@@ -137,6 +137,7 @@ pathogens_db = [
         positive_tests=[
             "test na hemolizyny",
             "test antygenowy w kierunku S. agalactiae",
+            "test na streptokinazę",
             "test PCR w kierunku GBS",
         ],
         treatments=[
@@ -194,7 +195,7 @@ pathogens_db = [
             "test na toksynę erytrogenną A (SpeA)",
             "test na toksynę erytrogenną B (SpeB)",
             "test na toksynę erytrogenną C (SpeC)",
-            "test na antygen grupy A",
+            "test PCR w kierunku GDS",
         ],
         treatments=[
             Treatment("penicyliny"),
@@ -264,6 +265,7 @@ pathogens_db = [
             "test na toksyny epidermolityczne: eksfoliatyny ETA, ETB",
             "test na enterotoksyny A-E",
             "test na TSST1",
+            "test na katalazowy",
         ],
         invitro_reactions=[
             InvitroReaction("mannitol", "fermentacja"),

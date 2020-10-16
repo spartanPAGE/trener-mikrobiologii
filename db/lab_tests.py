@@ -91,10 +91,6 @@ lab_tests_db = {
         category="toksyny",
     ),
     LabTest(
-        name="test na antygen grupy A",
-        category="immunotesty",
-    ),
-    LabTest(
         name="test antygenowy w kierunku S. agalactiae",
         category="immunotesty",
     ),
@@ -103,7 +99,15 @@ lab_tests_db = {
         category="PCR",
     ),
     LabTest(
-        name="test PCR w kierunku GDB",
+        name="test PCR w kierunku GDS",
         category="PCR"
-    )
+    ),
+    LabTest(
+        name="test PCR w kierunku GAS",
+        category="PCR"
+    ),
+    LabTest(
+        name="test katalazowy",
+        category="enzymy"
+    ),
 }
