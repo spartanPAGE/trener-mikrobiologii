@@ -35,7 +35,6 @@ pathogens_db = [
         ],
         positive_tests=[
             "test PCR w kierunku GDS",
-
         ],
         invitro_reactions=[
             InvitroReaction("krew", "hemoliza gamma"),
@@ -195,7 +194,7 @@ pathogens_db = [
             "test na toksynę erytrogenną A (SpeA)",
             "test na toksynę erytrogenną B (SpeB)",
             "test na toksynę erytrogenną C (SpeC)",
-            "test PCR w kierunku GDS",
+            "test PCR w kierunku GAS",
         ],
         treatments=[
             Treatment("penicyliny"),
