@@ -2,8 +2,16 @@ from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
     Chemotherapeutic(
+        name="linkomycyna",
+        traits=["linkozamidy"],
+    ),
+    Chemotherapeutic(
+        name="klindamycyna",
+        traits=["linkozamidy"],
+    ),
+    Chemotherapeutic(
         name="teikoplanina",
-        traits=[""]
+        traits=[""],
     ),
     Chemotherapeutic(
         name="ampicylina",
