@@ -2,6 +2,10 @@ from models.LabTest import LabTest
 
 lab_tests_db = {
     LabTest(
+        name="test antygenowy na wielocukier C",
+        category="immunotesty",
+    ),
+    LabTest(
         name="test na czynnik zlepny CF",
         category="aglutynacyjne",
     ),
@@ -87,7 +91,7 @@ lab_tests_db = {
         category="toksyny",
     ),
     LabTest(
-        name="test na antygen grupy A (dimer N-acetyloglukozaminy i ramnozy",
+        name="test na antygen grupy A",
         category="immunotesty",
     ),
     LabTest(

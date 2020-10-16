@@ -2,7 +2,93 @@ from models.Pathogen import Pathogen, Treatment
 from models.ClinicalForm import ClinicalForm
 from models.InvitroReaction import InvitroReaction
 
+S_PNEUMONIAE_SUS = [
+    "przewlekła niewydolność krążeniowo-oddechowa",
+    "upośledzenie śledziony",
+    "brak śledziony",
+    "cukrzyca",
+    "niewydolność nerek",
+    "hemodializa",
+    "nowotwór",
+    "HIV",
+    "immunosupresja",
+    "alkoholizm"
+]
+
 pathogens_db = [
+    Pathogen(
+        name="S. pneumoniae",
+        clinical_forms=[
+            ClinicalForm(
+                name="infekcja górnych dróg oddechowych",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="infekcja dolnych drógo oddechowych",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="zapalenie ucha środkowego",
+                susceptibilities=S_PNEUMONIAE_SUS
+            ),
+            ClinicalForm(
+                name="zapalenie zatok obocznych nosa",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="zapalenie oskrzeli",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="ropień opłucnej",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="ZOMR",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="spontaniczne zapalenie otrzewnej",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="zapalenie spojówek",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="zapalenie stawów",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="sepsa",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+            ClinicalForm(
+                name="zapalenie płuc z bakteriemią, sepsą i ZOMR",
+                susceptibilities=S_PNEUMONIAE_SUS,
+            ),
+        ],
+        positive_tests=[
+            "test antygenowy na wielocukier C",
+        ],
+        treatments=[
+            "penicyliny",
+            "wankomycyna",
+            "linezolid",
+            "wankomycyna",
+            "lewofloksacyna",
+            "moksifloksacyna",
+            "cefalosporyny 2 generacji",
+            "cefalosporyny 3 generacji",
+            "cefalosporyny 4 generacji",
+            "cefalosporyny 5 generacji",
+        ],
+        invitro_reactions=[
+            InvitroReaction("krew", "hemoliza alfa"),
+            InvitroReaction("optochina", "zachamowanie wzrostu"),
+            InvitroReaction("żółć", "rozpuszczenie kolonii"),
+        ],
+    ),
     Pathogen(
         name="S. agalactiae",
         clinical_forms=[

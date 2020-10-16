@@ -2,6 +2,18 @@ from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
     Chemotherapeutic(
+        name="linezolid",
+        traits=["oksazolidyny"],
+    ),
+    Chemotherapeutic(
+        name="lewofloksacyna",
+        traits=["fluorochinolony"],
+    ),
+    Chemotherapeutic(
+        name="moksifloksacyna",
+        traits=["naftyrydynochinolony"],
+    ),
+    Chemotherapeutic(
         name="erytromycyna",
         traits=["makrolidy", "makrolidy starszej generacji"],
     ),
