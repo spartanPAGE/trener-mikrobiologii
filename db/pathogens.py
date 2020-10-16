@@ -17,6 +17,32 @@ S_PNEUMONIAE_SUS = [
 
 pathogens_db = [
     Pathogen(
+        name="E. faecalis",
+        clinical_forms=[
+            # todo: add treatments for specific clinical forms (i.e. nitrofurantoin for urinary infection)
+            ClinicalForm("ZUM"),
+            ClinicalForm("zapalenie wsierdzia"),
+            ClinicalForm("zapalenie prostaty"),
+            ClinicalForm("zapalenie najądrzy"),
+        ],
+        treatments=[
+            Treatment("cefalosporyny 5 generacji"),
+            Treatment("wankomycyna"),
+            Treatment("ampicylina"),
+            Treatment("teikoplanina"),
+            Treatment("linezolid"),
+            Treatment("penicyliny"),
+        ],
+        positive_tests=[
+            "test PCR w kierunku GDB",
+
+        ],
+        invitro_reactions=[
+            InvitroReaction("krew", "hemoliza gamma"),
+            InvitroReaction("glukoza", "fermentacja bez gazu")
+        ]
+    ),
+    Pathogen(
         name="S. pneumoniae",
         clinical_forms=[
             ClinicalForm(
@@ -78,6 +104,7 @@ pathogens_db = [
             Treatment("wankomycyna"),
             Treatment("lewofloksacyna"),
             Treatment("moksifloksacyna"),
+            Treatment("teikoplanina"),
             Treatment("cefalosporyny 2 generacji"),
             Treatment("cefalosporyny 3 generacji"),
             Treatment("cefalosporyny 4 generacji"),
@@ -115,6 +142,7 @@ pathogens_db = [
         treatments=[
             Treatment("wankomycyna"),
             Treatment("makrolidy"),
+            Treatment("teikoplanina"),
             Treatment("cefalosporyny 1 generacji"),
             Treatment("cefalosporyny 3 generacji"),
             Treatment("cefalosporyny 4 generacji"),
@@ -174,6 +202,7 @@ pathogens_db = [
             Treatment("linkozamidy"),
             Treatment("cefalosporyny"),
             Treatment("bacytracyna"),
+            Treatment("teikoplanina"),
         ],
         invitro_reactions=[
             InvitroReaction("krew", "hemoliza beta"),
@@ -216,6 +245,7 @@ pathogens_db = [
             Treatment("wankomycyna"),
             Treatment("penicylina z inhibitorem beta-laktamazy"),
             Treatment("ceftarolina"),
+            Treatment("teikoplanina"),
             Treatment("cefalosporyny 1 generacji"),
             Treatment("cefalosporyny 3 generacji"),
             Treatment("cefalosporyny 4 generacji"),

@@ -6,4 +6,5 @@ reagents_db = [
     Reagent("krew"),
     Reagent("optochina"),
     Reagent("żółć"),
+    Reagent("glukoza"),
 ] + [Reagent(ch.name) for ch in chemotherapeutics_db]

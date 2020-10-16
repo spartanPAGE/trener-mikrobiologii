@@ -2,6 +2,14 @@ from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
     Chemotherapeutic(
+        name="teikoplanina",
+        traits=[""]
+    ),
+    Chemotherapeutic(
+        name="ampicylina",
+        traits=["penicyliny"]
+    ),
+    Chemotherapeutic(
         name="linezolid",
         traits=["oksazolidyny"],
     ),
@@ -40,6 +48,10 @@ chemotherapeutics_db = [
     Chemotherapeutic("bacytracyna"),
     Chemotherapeutic("cefazolina"),
     Chemotherapeutic("wankomycyna"),
+    Chemotherapeutic(
+        name="ampicylina",
+        traits=["penicyliny"]
+    ),
     Chemotherapeutic(
         name="penicylina benzylowa",
         traits=["penicyliny"]

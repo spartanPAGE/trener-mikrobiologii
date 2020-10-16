@@ -101,5 +101,9 @@ lab_tests_db = {
     LabTest(
         name="test PCR w kierunku GBS",
         category="PCR",
+    ),
+    LabTest(
+        name="test PCR w kierunku GDB",
+        category="PCR"
     )
 }
