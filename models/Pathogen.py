@@ -5,9 +5,16 @@ class Treatment:
 
 
 class Pathogen:
-    def __init__(self, name, clinical_forms=[], treatments=[], positive_tests=[], invitro_reactions=[]):
+    def __init__(
+        self,
+        name,
+        clinical_forms=None,
+        treatments=None,
+        positive_tests=None,
+        invitro_reactions=None
+    ):
         self.name = name
-        self.clinical_forms = clinical_forms
-        self.treatments = treatments
-        self.positive_tests = positive_tests
-        self.invitro_reactions = invitro_reactions
+        self.clinical_forms = clinical_forms or []
+        self.treatments = treatments or []
+        self.positive_tests = positive_tests or []
+        self.invitro_reactions = invitro_reactions or []
