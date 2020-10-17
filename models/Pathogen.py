@@ -11,7 +11,7 @@ class Pathogen:
         clinical_forms=None,
         treatments=None,
         positive_tests=None,
-        invitro_reactions=None
+        invitro_reactions=None,
     ):
         self.name = name
         self.clinical_forms = clinical_forms or []

@@ -20,7 +20,10 @@ pathogens_db = [
         name="E. faecalis",
         clinical_forms=[
             # todo: add treatments for specific clinical forms (i.e. nitrofurantoin for urinary infection)
-            ClinicalForm("ZUM"),
+            ClinicalForm(
+                name="ZUM",
+                treatments=["ciprofloksacyna", "trometamol z fosfomycyną"]
+            ),
             ClinicalForm("zapalenie wsierdzia"),
             ClinicalForm("zapalenie prostaty"),
             ClinicalForm("zapalenie najądrzy"),

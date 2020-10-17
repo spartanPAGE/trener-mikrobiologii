@@ -1,6 +1,11 @@
 from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
+    Chemotherapeutic("trometamol z fosfomycyną"),
+    Chemotherapeutic(
+        name="ciprofloksacyna",
+        traits=["chinolony 2 generacji"],
+    ),
     Chemotherapeutic(
         name="cefazolina",
         traits=["cefalosporyny 1 generacji"]

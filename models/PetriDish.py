@@ -1,4 +1,4 @@
-from tools.pathogen import does_substance_kills_pathogen
+from tools.chemotherapeutic import does_substance_kills_pathogen
 
 class PetriDish:
     def __init__(self, name, substances=None, pathogens=None):

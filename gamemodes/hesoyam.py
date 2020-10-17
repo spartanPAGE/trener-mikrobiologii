@@ -11,7 +11,7 @@ from models.PetriDish import PetriDish
 
 from tools.clinical_forms_prep import extract_clinical_forms_by_susceptibilities
 from tools.patients_prep import generate_sick_patient
-from tools.pathogen import does_substance_kills_pathogen
+from tools.chemotherapeutic import does_substance_treat_illness
 
 def prepare_clinical_forms_db():
     return extract_clinical_forms_by_susceptibilities(pathogens_db)
@@ -152,17 +152,12 @@ class Game:
         while True:
             drug_name = input("Podaj nazwę leku: ")
             if drug_name in drugs:
-                killed_pathogens = []
-                for pathogen in self.patient.pathogens:
-                    if does_substance_kills_pathogen(drug_name, pathogen):
-                        killed_pathogens.append(pathogen)
+                cured_illnesses = []
+                for illness in self.patient.illnesses:
+                    if does_substance_treat_illness(drug_name, illness):
+                        cured_illnesses.append(illness)
 
-                for killed_pathogen in killed_pathogens:
-                    self.patient.pathogens.remove(killed_pathogen)
-                    self.patient.illnesses = list(filter(
-                        lambda illness: illness.pathogen.name != killed_pathogen.name,
-                        self.patient.illnesses
-                    ))
+                self.patient.illnesses = list(set(self.patient.illnesses) - set(cured_illnesses))
 
                 if len(self.patient.illnesses) > 0:
                     print("Pacjent wciąż choruje.")
