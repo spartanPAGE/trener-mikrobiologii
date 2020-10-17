@@ -1,10 +1,10 @@
 class Patient:
-    def __init__(self, age, sex, predispositions=None, pathogens=None, clinical_forms=None):
+    def __init__(self, age, sex, predispositions=None, pathogens=None, illnesses=None):
         self.age = age
         self.sex = sex
         self.predispositions = predispositions or []
         self.pathogens = pathogens or []
-        self.clinical_forms = clinical_forms or []
+        self.illnesses = illnesses or []
         
         self._apply_automatic_predispositions()
 

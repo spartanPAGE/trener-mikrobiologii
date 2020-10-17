@@ -1,6 +1,8 @@
 import random
 import copy
 
+from models.Illness import Illness
+
 def _get_random_predisposed_form(patient_model, clinical_forms):
     random_predispositions = copy.copy(patient_model.predispositions)
     random.shuffle(random_predispositions)
@@ -43,6 +45,6 @@ def generate_sick_patient(patient_model, pathogens, clinical_forms):
     patient = copy.deepcopy(patient_model)
     patient.pathogens.append(pathogen)
 
-    patient.clinical_forms.append(clinical_form)
+    patient.illnesses.append(Illness(clinical_form.name, pathogen))
 
     return patient

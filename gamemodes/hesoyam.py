@@ -23,7 +23,7 @@ def prepare_patient(clinical_forms_db):
 def show_patient_info(patient):
     print("Pacjent lat", patient.age, "płeć", "mężczyzna" if patient.sex == "M" else "kobieta")
     print("predyspozycje z wywiadu:", ", ".join(patient.predispositions))
-    print("dolegliwości:", ", ".join([cf.name for cf in patient.clinical_forms]))
+    print("dolegliwości:", ", ".join([cf.name for cf in patient.illnesses]))
 
 def show_available_chemo():
     print("dostępne leki:")
@@ -159,8 +159,12 @@ class Game:
 
                 for killed_pathogen in killed_pathogens:
                     self.patient.pathogens.remove(killed_pathogen)
+                    self.patient.illnesses = list(filter(
+                        lambda illness: illness.pathogen.name != killed_pathogen.name,
+                        self.patient.illnesses
+                    ))
 
-                if len(self.patient.pathogens) > 0:
+                if len(self.patient.illnesses) > 0:
                     print("Pacjent wciąż choruje.")
                 else:
                     print("Pacjent wyzdrowiał. Wołam nowego pacjenta.")
