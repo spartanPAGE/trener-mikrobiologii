@@ -144,6 +144,7 @@ pathogens_db = [
             Treatment("wankomycyna"),
             Treatment("makrolidy"),
             Treatment("teikoplanina"),
+            Treatment("penicyliny"),
             Treatment("cefalosporyny 1 generacji"),
             Treatment("cefalosporyny 3 generacji"),
             Treatment("cefalosporyny 4 generacji"),

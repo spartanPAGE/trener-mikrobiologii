@@ -2,6 +2,10 @@ from models.Chemotherapeutic import Chemotherapeutic
 
 chemotherapeutics_db = [
     Chemotherapeutic(
+        name="cefazolina",
+        traits=["cefalosporyny 1 generacji"]
+    ),
+    Chemotherapeutic(
         name="ceftriakson",
         traits=["cefalosporyny 3 generacji"]
     ),
@@ -60,10 +64,6 @@ chemotherapeutics_db = [
     Chemotherapeutic("bacytracyna"),
     Chemotherapeutic("cefazolina"),
     Chemotherapeutic("wankomycyna"),
-    Chemotherapeutic(
-        name="ampicylina",
-        traits=["penicyliny"]
-    ),
     Chemotherapeutic(
         name="penicylina benzylowa",
         traits=["penicyliny"]
