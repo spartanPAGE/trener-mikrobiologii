@@ -2,6 +2,9 @@ from models.Pathogen import Pathogen, Treatment
 from models.ClinicalForm import ClinicalForm
 from models.InvitroReaction import InvitroReaction
 
+C_DIPTHERIAE_REQ = [
+    "pominięte szczepienie DTaP/DiPerTE"
+]
 S_PNEUMONIAE_SUS = [
     "przewlekła niewydolność krążeniowo-oddechowa",
     "upośledzenie śledziony",
@@ -12,10 +15,34 @@ S_PNEUMONIAE_SUS = [
     "nowotwór",
     "HIV",
     "immunosupresja",
-    "alkoholizm"
+    "alkoholizm",
 ]
 
 pathogens_db = [
+    # todo: izolaty gratis, mitis, belfanti, intermedium), C. ulcerans i C. pseudotuberculosis
+    # todo: clinical form treated by antitoxin,
+    # but underlying pathogen can make clinical form reoccur if not treated by i.e. antibiotics
+    Pathogen(
+        name="C. diphtheriae",
+        clinical_forms=[
+            ClinicalForm("zaburzenie oddechowe", requirements=C_DIPTHERIAE_REQ),
+            ClinicalForm("zapalenie mięśnia sercowego", requirements=C_DIPTHERIAE_REQ),
+            ClinicalForm("arytmia", requirements=C_DIPTHERIAE_REQ),
+            ClinicalForm("wiotkie porażenie nerwów", requirements=C_DIPTHERIAE_REQ),
+        ],
+        treatments=[
+            Treatment("makrolidy"),
+            Treatment("penicyliny"),
+        ],
+        positive_tests=[
+            "test Eleka",
+            "test na hemolizyny",
+            "test katalazowy",
+        ],
+        invitro_reactions=[
+            InvitroReaction("krew", "słaba hemoliza beta"),
+        ],
+    ),
     Pathogen(
         name="E. faecalis",
         clinical_forms=[
@@ -269,7 +296,7 @@ pathogens_db = [
             "test na toksyny epidermolityczne: eksfoliatyny ETA, ETB",
             "test na enterotoksyny A-E",
             "test na TSST1",
-            "test na katalazowy",
+            "test katalazowy",
         ],
         invitro_reactions=[
             InvitroReaction("mannitol", "fermentacja"),

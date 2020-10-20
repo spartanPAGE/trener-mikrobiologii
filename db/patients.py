@@ -6,7 +6,8 @@ patients_db = [
         sex="K",
         predispositions=[
             "alkoholizm",
-            "menstruacja"
+            "menstruacja",
+            "pominięte szczepienie DTaP/DiPerTE",
         ]
     ),
     Patient(
@@ -28,7 +29,8 @@ patients_db = [
         age=21,
         sex="K",
         predispositions=[
-            "zła higiena"
+            "zła higiena",
+            "pominięte szczepienie DTaP/DiPerTE",
         ]
     ),
     Patient(
@@ -49,5 +51,8 @@ patients_db = [
     Patient(
         age=27,
         sex="M",
+        predispositions=[
+            "pominięte szczepienie DTaP/DiPerTE",
+        ]
     )
 ]

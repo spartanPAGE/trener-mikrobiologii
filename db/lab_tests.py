@@ -2,6 +2,10 @@ from models.LabTest import LabTest
 
 lab_tests_db = {
     LabTest(
+        name="test Eleka",
+        category="immunotesty",
+    ),
+    LabTest(
         name="test antygenowy na wielocukier C",
         category="immunotesty",
     ),
